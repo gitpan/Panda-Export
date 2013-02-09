@@ -1,3 +1,4 @@
+Changes
 Export.xs
 inc/Module/AutoInstall.pm
 inc/Module/Install.pm
@@ -20,3 +21,4 @@ ppport.h
 t/00-Panda-Export.t
 t/01-basic.t
 t/ExTest.pm
+t/MyTest.pm

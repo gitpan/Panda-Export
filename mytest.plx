@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 use 5.012;
-use lib 'blib/lib', 'blib/arch';
+use lib 'blib/lib', 'blib/arch', 't';
 use Benchmark qw/timethis timethese/;
 use Panda::Export { abc => 1};
 use Time::HiRes;
