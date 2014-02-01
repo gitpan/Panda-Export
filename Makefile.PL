@@ -4,7 +4,7 @@ name     'Panda-Export';
 all_from 'lib/Panda/Export.pm';
 
 makemaker_args(
-    CC    => 'g++',
+    CC    => 'c++',
     LD    => '$(CC)',
     XSOPT => '-C++',
 );
