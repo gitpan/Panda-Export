@@ -1,13 +1,7 @@
-use inc::Module::Install;
+use strict;
+use Panda::Install;
 
-name     'Panda-Export';
-all_from 'lib/Panda/Export.pm';
-
-makemaker_args(
-    CC    => 'c++',
-    LD    => '$(CC)',
-    XSOPT => '-C++',
+write_makefile(
+    NAME     => 'Panda::Export',
+    BIN_DEPS => 'Panda::XS',
 );
-
-auto_install;
-WriteAll;

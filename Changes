@@ -1,4 +1,10 @@
-1.2  02.02.2014
+2.1.0  26.09.2014
+        - constants creation speeded up by 25%
+        - constants importing (when 'use Class' or 'use Class ":const"') speeded up by 100%
+        - added support for list syntax when creating constants
+2.0.0  28.03.2014
+        - switch to Panda::Install & Panda::XS
+1.2    02.02.2014
         - change compiler g++ -> c++
-1.1  09.02.2013
+1.1    09.02.2013
         - first release

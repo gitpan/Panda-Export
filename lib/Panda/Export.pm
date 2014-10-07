@@ -1,7 +1,7 @@
 package Panda::Export;
 use 5.012;
 
-our $VERSION = '1.2';
+our $VERSION = '2.1.0';
 
 =head1 NAME
 
@@ -12,8 +12,8 @@ lot of constants/functions without slowing down the startup.
 
 =cut
 
-require XSLoader;
-XSLoader::load('Panda::Export', $VERSION);
+require Panda::XSLoader;
+Panda::XSLoader::load();
 
 =head1 SYNOPSIS
 
@@ -36,10 +36,9 @@ XSLoader::load('Panda::Export', $VERSION);
 
     package MyModule;
     
-    use Panda::Export {
+    use Panda::Export
         CONST1 => 1,
-        CONST2 => 'string',
-    };
+        CONST2 => 'string';
     
     say CONST1;
     say CONST2;
@@ -68,7 +67,8 @@ XSLoader::load('Panda::Export', $VERSION);
 
 You can create constants by saying
 
-    use Panda::Export {CONST_NAME1 => VALUE1, ...}
+    use Panda::Export {CONST_NAME1 => VALUE1, ...};
+    use Panda::Export CONST_NAME1 => VALUE1, ... ;
 
 If you want your class to able to export constants or functions you need to derive from Panda::Export.
 
@@ -95,7 +95,7 @@ If you specify wrong sub or const name in import list an exception will also be 
 
 =head1 PERFOMANCE
 
-Panda::Export is up to 10x faster than const.pm and 5x faster than Exporter.pm at compile-time.
+Panda::Export is up to 10x faster than const.pm and Exporter.pm at compile-time.
 The runtime perfomance is the same as it doesn't depend on this module.
 
 =head1 AUTHOR
